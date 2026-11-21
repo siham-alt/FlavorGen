@@ -1,0 +1,36 @@
+.dashboard {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px; /* Largeur de la barre latérale */
+    background-color: #f0f0f0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+
+.dashboard-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px; /* Marge pour éviter la superposition avec la barre latérale */
+}
+
+.main-content {
+    padding: 20px;
+    background-color: #f9f9f9;
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+

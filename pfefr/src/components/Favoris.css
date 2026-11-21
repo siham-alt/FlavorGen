@@ -1,0 +1,286 @@
+.favorites-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 40px;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favorites-title {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #FF6600;
+    font-size: 3em; /* Augmentation de la taille du titre */
+    font-weight: bold;
+    letter-spacing: 3px; /* Espacement des lettres pour un effet plus prononcé */
+    text-transform: uppercase; /* Titre en majuscules */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre pour le titre */
+    border-bottom: 3px solid #ff3700; /* Ajout d'une bordure en dessous du titre */
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.favorites-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre à la table */
+    border-radius: 10px; /* Bords arrondis pour la table */
+    overflow: hidden; /* Assure que les bords arrondis fonctionnent correctement */
+}
+
+.favorites-table th, .favorites-table td {
+    border: 1px solid #ddd;
+    padding: 15px 20px;
+    text-align: left;
+}
+
+.favorites-table th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+    text-transform: uppercase; /* En-têtes en majuscules */
+    letter-spacing: 1px;
+}
+
+.favorites-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.favorites-table tr:hover {
+    background-color: #e6f7ff;
+    cursor: pointer;
+}
+
+.recipe-image {
+    width: 120px; /* Légèrement plus grand */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.details-button, .delete-button {
+    background-color: #16b18d;
+    color: white;
+    padding: 10px 20px; /* Plus de padding pour les boutons */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600; /* Texte en gras */
+    margin: 5px; /* Ajout de marge entre les boutons */
+}
+
+.delete-button {
+    background-color: #e74c3c;
+}
+
+.details-button:hover {
+    background-color: #148657;
+}
+
+.delete-button:hover {
+    background-color: #c23b2b;
+}
+.recipe-details-row {
+    background-color: #f0f0f0;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.recipe-details-row .recipe-details-panel {
+    padding: 20px;
+}
+
+.recipe-details-row.active {
+    max-height: 1000px; /* Ajustez la hauteur maximale en fonction du contenu */
+}
+
+.recipe-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.close-details {
+    background-color: #f0f0f0; /* Couleur de fond légère */
+    border: none;
+    font-size: 1.5em;
+    color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 40px; /* Taille du bouton */
+    height: 40px;
+    border-radius: 50%; /* Forme circulaire */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1; /* Aligner le texte au centre verticalement */
+    padding: 0; /* Supprimer le padding par défaut */
+    font-weight: bold;
+}
+
+.close-details:hover {
+    background-color: #ddd; /* Couleur de fond plus foncée au survol */
+    color: #333; /* Couleur du texte plus foncée au survol */
+}
+
+.details-image {
+    width: 250px;
+    float: left;
+    margin-right: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease;
+    transform: perspective(800px) rotateY(0deg);
+    transform-style: preserve-3d;
+}
+
+.details-image:hover {
+    transform: perspective(800px) rotateY(10deg);
+}
+
+.recipe-details-text {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.7;
+    color: #444;
+}
+
+.recipe-details-text h2 {
+    font-family: 'Montserrat', sans-serif; /* Police moderne */
+    font-size: 2.2em; /* Taille plus grande */
+    font-weight: 700; /* Plus gras */
+    color: #ff5e4d; /* Couleur accent */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre de texte */
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.recipe-details-text h2::before {
+    content: '🍽️ '; /* Icône d'assiette */
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.recipe-details-text h3 {
+    font-size: 2em;
+    color: #ff6637;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-family: 'Pacifico', cursive;
+    font-weight: bold;
+
+}
+
+.recipe-details-text h3::before {
+    margin-right: 15px;
+    font-size: 1.5em;
+}
+
+.recipe-details-text h3.ingredients::before {
+    content: '🥗'; /* Icône pour les ingrédients */
+}
+
+.recipe-details-text h3.instructions::before {
+    content: '👩‍🍳'; /* Icône pour les instructions */
+}
+
+.ingredients-card ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.ingredients-card li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+ingredients-card li:hover {
+    transform: translateY(-5px);
+}
+
+ingredients-card li::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    margin-right: 15px;
+}
+
+.instructions-card ol {
+    margin-left: 20px;
+    list-style-type: decimal;
+}
+
+.instructions-card li {
+    margin-bottom: 10px;
+    padding-left: 0;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    transition: none;
+}
+
+.ingredients-card, .instructions-card  ,.nutrition-card {
+    background-color: #f0f0f0;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+}
+
+.nutrition-card {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.nutrition {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.nutrition-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nutrition-card li {
+    margin-bottom: 5px;
+}
+
+
+.planning-button {
+    background-color: #4c74b0; /* Couleur de fond bleue */
+    color: white; /* Texte blanc */
+    padding: 10px 20px; /* Espacement intérieur */
+    border: none; /* Pas de bordure */
+    border-radius: 6px; /* Bords arrondis */
+    cursor: pointer; /* Curseur de main au survol */
+    transition: background-color 0.3s ease; /* Transition douce de la couleur de fond */
+    font-weight: 600; /* Texte en gras */
+    margin: 5px; /* Marge autour du bouton */
+}
+
+.planning-button:hover {
+    background-color: #294d66; /* Couleur de fond bleue plus foncée au survol */
+}

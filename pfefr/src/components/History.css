@@ -1,0 +1,302 @@
+.history-page {
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f5f1;
+    color: #333;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-opacity="0.1"%3E%3Ccircle fill="%23e98074" cx="25" cy="25" r="10"/%3E%3Ccircle fill="%23e8bbcf" cx="75" cy="75" r="10"/%3E%3C/g%3E');
+}
+
+.history-page h1 {
+    margin-bottom: 10px; /* Réduit l'espacement sous le titre */
+    color: #e98074;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    display: flex; /* Utilise flexbox pour aligner l'icône */
+    align-items: center; /* Aligne verticalement l'icône */
+}
+
+.history-page h1::before {
+    content: ''; /* Icône d'historique (vous pouvez utiliser une autre icône) */
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.history-page p {
+    color: #666;
+    margin-bottom: 20px; /* Réduit l'espacement sous la description */
+    line-height: 1.6;
+    font-style: italic; /* Style italique pour la description */
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.filters label {
+    margin-right: 5px; /* Réduit l'espacement à droite des étiquettes */
+    color: #555;
+    font-weight: bold; /* Ajoute du gras aux étiquettes */
+}
+
+.filters input[type="date"],
+.filters input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px;
+    background-color: white;
+}
+
+.conversation-list {
+    margin-bottom: 30px;
+}
+
+/* ... (autres styles) ... */
+
+.conversation-card {
+    border: none;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.conversation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.conversation-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: center;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.conversation-summary {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.conversation-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.conversation-actions button {
+    margin-left: 10px;
+    background-color: #e98074;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.conversation-actions button:hover {
+    background-color: #e57373;
+}
+.custom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.custom-modal {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+}
+
+.custom-modal-header h2 {
+    font-size: 2em;
+    margin: 0;
+    color: #e98074;
+    font-family: 'Lobster', cursive;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.custom-modal-body {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+.custom-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.custom-modal-footer button {
+    margin-left: 10px;
+    background-color: #e98074;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-modal-footer button:hover {
+    background-color: #e57373;
+}
+.message-detail {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.message-detail strong {
+    color: #e98074;
+}
+
+.recipe-details {
+    margin-top: 15px;
+    border: 1px solid #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.recipe-details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.recipe-details h3 {
+    font-size: 1.8em;
+    color: #e98074;
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e98074;
+    padding-bottom: 5px;
+}
+
+.generated-recipes {
+    margin-top: 15px;
+    border: 1px solid #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.generated-recipes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.generated-recipes li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.generated-recipes li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+.generated-recipes h4 {
+    font-size: 1.5em;
+    color: #e98074;
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e98074;
+    padding-bottom: 5px;
+}
+
+.clear-history {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.clear-history button {
+    background-color: #d32f2f;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clear-history button:hover {
+    background-color: #c62828;
+}
+
+/* Style pour les badges IA/Utilisateur */
+.conversation-header .badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+
+.conversation-header .badge-info {
+    background-color: #007bff;
+    color: white;
+}
+
+.conversation-header .badge-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Style pour les liens dans les détails de la recette */
+.recipe-details a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.recipe-details a:hover {
+    text-decoration: underline;
+}
+
+/* Style pour les erreurs et le chargement */
+.text-danger {
+    color: #d32f2f;
+    margin-top: 10px;
+}
+
+.loading {
+    margin-top: 10px;
+    font-style: italic;
+}

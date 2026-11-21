@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  .page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav li {
+    margin-left: 20px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .hero {
+    background-color: #f0f0f0;
+    padding: 50px 20px;
+  }
+  
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .text-content {
+    flex: 1;
+  }
+  
+  .chef-special {
+    color: #F39C12;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .quote {
+    font-style: italic;
+    margin-bottom: 30px;
+  }
+  
+  .download-btn {
+    background-color: #E74C3C;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .image-content {
+    flex: 1;
+    text-align: right;
+    position: relative; /* Ajout de position relative pour les images */
+  }
+  
+  .plat-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .fraises, .myrtilles, .feuilles {
+    position: absolute;
+  }
+  
+  .fraises {
+    top: 10%;
+    right: 10%;
+    width: 80px;
+  }
+  
+  .myrtilles {
+    bottom: 10%;
+    left: 10%;
+    width: 60px;
+  }
+  
+  .feuilles {
+    top: 50%;
+    right: 5%;
+    width: 100px;
+  }

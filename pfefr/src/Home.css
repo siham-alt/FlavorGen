@@ -1,0 +1,797 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #FFF9EC;
+    color: #333;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* ... autres styles ... */
+
+/* ... autres styles ... */
+
+.navbar {
+    background: #FFF9EC;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px; /* Réduction du padding vertical */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    min-height: 80px; /* Ajout d'une hauteur minimale */
+}
+/* ... autres styles ... */
+
+.navbar .nav-link {
+    color: #333;
+    text-decoration: none;
+    padding: 12px 20px; /* Augmentation du padding pour un bouton plus grand */
+    border-radius: 25px; /* Bordures plus arrondies pour un style bouton */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Ajout d'une transition pour l'ombre */
+    margin: 0 10px;
+    font-weight: 600;
+    font-size: 1.1em;
+    background-color: #f0f0f0; /* Couleur de fond initiale */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Légère ombre */
+}
+
+.navbar .nav-link:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-3px); /* Élévation plus prononcée au survol */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Ombre plus forte au survol */
+}
+
+/* Home.css */
+/* Home.css */
+
+.auth-links {
+    display: flex;
+    gap: 15px; /* Increased spacing */
+    align-items: center; /* Vertically align items if needed */
+}
+
+.auth-links .btn {
+    background-color: #FFC300; /* Golden yellow background */
+    color: #343a40; /* Dark gray text */
+    border: none; /* Remove square border */
+    padding: 12px 20px; /* Slightly larger padding */
+    border-radius: 20px; /* More pronounced rounded corners */
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold; /* Make text bolder */
+    text-decoration: none; /* Remove underlines if you use <a> tags */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add transform for a slight movement */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.auth-links .btn:hover {
+    background-color: #ff9900; /* Darker golden yellow on hover */
+    color: #f8f9fa; /* Light gray text on hover */
+    transform: translateY(-2px); /* Move up slightly on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+}
+
+.navbar .logo {
+    margin-right: auto; /* Pousse le logo vers la gauche */
+}
+
+.navbar .nav-link {
+    margin: 0 auto; /* Centre le lien "Liste des Recettes" */
+}
+
+.navbar .auth-links {
+    margin-left: auto; /* Pousse les boutons de connexion/inscription vers la droite */
+}
+.logo {
+    color: #FF5733;
+    font-size: 28px;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px 15px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 200px;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #FF5733;
+}
+
+
+
+
+
+
+.btn {
+    background: #FFC300;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background-color: #FFA500;
+}
+
+.hero {
+    background: linear-gradient(to bottom, #FFF9EC, #F5F5F5);
+    padding: 100px 20px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:  url('/images/Colorful Illustration Food Traditional Meal Zoom Virtual Background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1.9;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding: 50px;
+}
+
+.hero-left {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.hero-left h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #00563f;
+}
+
+.hero-left p {
+    font-size: 1.4em;
+    line-height: 1.6;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.start-btn {
+    background: #FF5733;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.start-btn:hover {
+    transform: scale(1.05);
+    background-color: #FFA500;
+}
+
+.plats-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.plats-container {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    overflow: hidden; /* Important pour éviter les débordements */
+}
+
+.plats-container img {
+    width: auto;
+    height: auto;
+    max-width: 150%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.plat-item {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out; /* Transition plus douce */
+}
+
+.plat-item.initial {
+    opacity: 1;
+    transform: scale(1); /* Taille initiale */
+}
+
+.plat-item.slide-out {
+    opacity: 0;
+    transform: scale(0.8); /* Réduction de la taille */
+}
+
+.plat-item.slide-in {
+    opacity: 1;
+    transform: scale(1); /* Taille finale */
+}
+
+.features {
+    padding: 100px 20px;
+    background: #FFF9EC;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.features h2 {
+    font-size: 2.5em;
+    margin-bottom: 60px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+    flex: 0 1 auto;
+    max-width: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+.feature-card.fade-in-up {
+    opacity: 1;
+    transform: translateY(0); /* Remonte à sa position d'origine */
+}
+
+
+.feature-icon {
+    font-size: 60px;
+    margin-bottom: 25px;
+    color: #FF5733;
+    transition: transform 0.6s ease, color 0.4s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: rotate(360deg);
+    color: #FFA500;
+}
+
+.feature-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.feature-card p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Arrière-plans colorés pour les cartes */
+.feature-card::before,
+.feature-card::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: -1;
+    transition: transform 0.6s ease;
+}
+
+/* Couleurs adaptées à votre projet */
+.feature-card::before {
+    background: linear-gradient(135deg, #FFC107, #FF9800); /* Orange/Jaune */
+    top: -50%;
+    left: -50%;
+}
+
+.feature-card::after {
+    background: linear-gradient(135deg, #FFB347, #FFA500); /* Orange plus foncé */
+    bottom: -50%;
+    right: -50%;
+}
+
+.feature-card:nth-child(2)::before {
+    background: linear-gradient(135deg, #FF9800, #FF6F00); /* Orange plus intense */
+}
+
+.feature-card:nth-child(2)::after {
+    background: linear-gradient(135deg, #FF8A65, #FF7043); /* Orange/Rouge */
+}
+
+.feature-card:nth-child(3)::before {
+    background: linear-gradient(135deg, #FFD700, #FFC107); /* Jaune plus clair */
+}
+
+.feature-card:nth-child(3)::after {
+    background: linear-gradient(135deg, #FFA500, #FF8C00); /* Orange plus doux */
+}
+
+.feature-card:hover::before {
+    transform: scale(1.1) rotate(45deg);
+}
+
+.feature-card:hover::after {
+    transform: scale(1.1) rotate(-45deg);
+}
+
+
+.recettes-populaires {
+    position: relative;
+    overflow: hidden;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.recettes-populaires::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #FF5733 0%, #ff8364 50%, #FF5733 100%);
+    clip-path: polygon(100% 0, 50% 15%, 0 0, 0 100%, 50% 85%, 100% 100%);
+    z-index: 1;
+}
+
+.recettes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 100px; /* Augmentation de l'espacement entre les cartes */
+    position: relative;
+    z-index: 2;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Style des cartes de recettes */
+.recette-card {
+    background: white;
+    width: 380px;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+    overflow: hidden;
+}
+
+.recette-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.recette-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* Style du contenu */
+.recette-content {
+    text-align: left;
+}
+
+.recette-content h3 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.recette-content p {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+/* Style des boutons */
+.recette-content .btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #ffce2d, #ed7e00);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1em;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(255, 165, 0, 0.3);
+    text-decoration: none;
+}
+
+.recette-content .btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #FFA500, #FF8C00);
+    box-shadow: 0 6px 12px rgba(255, 140, 0, 0.4);
+}
+
+/* Bouton "Voir plus" */
+.voir-plus {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    background: #FF5733;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 87, 51, 0.3);
+    text-decoration: none;
+}
+
+.voir-plus:hover {
+    transform: translateY(-3px);
+    background: #E64A19;
+    box-shadow: 0 6px 12px rgba(230, 74, 25, 0.4);
+}
+
+
+
+
+
+.footer-new {
+    position: relative; /* Ajout pour positionner la vague */
+    background: #FFF9EC;
+    padding: 80px 20px;
+    color: #333;
+    text-align: left;
+    overflow: hidden; /* Empêche le contenu de déborder */
+    
+}
+
+.footer-wave {
+    position: absolute; /* Position absolue pour superposer la vague */
+    top: -80PX;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Ajustez la hauteur de la vague */
+    background: #FF5733; /* Couleur de la vague */
+    clip-path: polygon(0 80%, 10% 70%, 25% 85%, 40% 75%, 55% 90%, 70% 80%, 85% 95%, 100% 85%, 100% 100%, 0 100%);
+}
+.footer-wave {
+    /* ... styles existants ... */
+    animation: undulatingWave 6s infinite alternate ease-in-out;
+    transform-origin: 50% 100%; /* Point d'origine pour la transformation */
+}
+
+
+@keyframes undulatingWave {
+    0% {
+        clip-path: polygon(0 70%, 15% 80%, 30% 70%, 45% 85%, 60% 75%, 75% 90%, 90% 80%, 100% 85%, 100% 100%, 0 100%);
+        transform: translateY(10px);
+    }
+    50% {
+        clip-path: polygon(0 80%, 10% 75%, 25% 90%, 40% 80%, 55% 95%, 70% 85%, 85% 70%, 100% 80%, 100% 100%, 0 100%);
+        transform: translateY(-5px);
+    }
+    100% {
+        clip-path: polygon(0 70%, 15% 80%, 30% 70%, 45% 85%, 60% 75%, 75% 90%, 90% 80%, 100% 85%, 100% 100%, 0 100%);
+        transform: translateY(10px);
+    }
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 colonnes */
+    gap: 40px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+.footer-brand {
+    grid-column: 1 / 2;
+}
+
+.footer-brand .logo1 {
+    color: #FF5733; /* Couleur orange du logo */
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.footer-brand p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.footer-links-grid {
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 colonnes de liens */
+    gap: 20px;
+}
+
+.footer-links-column h3 {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    color: #FF5733; /* Couleur orange pour les titres */
+}
+
+.footer-links-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links-column ul li a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links-column ul li a:hover {
+    color: #FF5733; /* Couleur orange au survol */
+}
+
+.footer-newsletter {
+    grid-column: 4 / 5;
+}
+
+.footer-newsletter h3 {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    color: #FF5733;
+}
+
+.footer-newsletter p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.footer-newsletter form {
+    display: flex;
+}
+
+.footer-newsletter input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.footer-newsletter button {
+    background: #FF5733; /* Couleur orange pour le bouton */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.footer-newsletter button:hover {
+    background: #FFA500; /* Couleur orange plus claire au survol */
+}
+
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: left;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ddd;
+    color: #333;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #FF5733;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer-contact {
+    margin-top: 20px;
+}
+.footer-contact {
+    grid-column: 4 / 5; /* Place le formulaire dans la 4e colonne */
+}
+
+.footer-contact h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #FF5733;
+}
+
+.footer-contact p {
+    margin-bottom: 20px;
+}
+
+.footer-contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-contact input,
+.footer-contact textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%; /* S'étend sur toute la largeur */
+
+}
+
+
+.footer-contact textarea {
+    resize: vertical; /* Permet de redimensionner verticalement */
+}
+
+.footer-contact button {
+    background-color: #FF5733; /* Couleur orange */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.footer-contact button:hover {
+    background-color: #fb3a0e; /* Assombrit légèrement au survol */
+}
+
+
+
+
+
+
+
+
+.navbar .logo-image {
+    height: 50px; /* Smaller height for the logo image */
+    margin-right: 8px; /* Adjust spacing */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* If you have a logo in the footer as well */
+.footer-new .footer-brand .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em; /* Smaller font size for footer logo text */
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-new .footer-brand .logo-image-footer {
+    height: 20px; /* Smaller height for footer logo image */
+    margin-right: 6px; /* Adjust spacing */
+    width: auto;
+}
+
+/* Adjust overall navbar padding if needed */
+.navbar {
+    padding: 10px 20px; /* Example: reduce top/bottom padding */
+    /* ... other navbar styles ... */
+}
+
+
+/* Home.css */
+/* ... autres styles ... */
+
+.success-message {
+    color: green;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.sending-message {
+    color: rgb(255, 72, 52);
+    font-style: italic;
+    margin-top: 5px;
+    font-size: 20px;
+}

@@ -1,0 +1,83 @@
+/* adSidebar.css */
+
+/* Main Sidebar Container */
+.sidebarr {
+  width: 280px; /* Slightly wider */
+  height: 100vh;
+  background-color: #37628d; /* Darker sidebar background */
+  color: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+  padding: 25px; /* More padding */
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.15);
+  z-index: 101; /* Ensure it's above the navbar if needed */
+}
+
+/* Sidebar Title */
+.sidebarr-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 40px;
+  text-align: left; /* Align title to the left */
+}
+
+/* Navigation List */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Sidebar Item */
+.sidebarr-item {
+  margin-bottom: 18px;
+}
+
+/* Sidebar Links */
+.sidebarr-link {
+  text-decoration: none;
+  color: #bdc3c7; /* Lighter text for links */
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Icons */
+.icon {
+  font-size: 22px;
+  margin-right: 12px;
+  color: #95a5a6; /* Slightly muted icon color */
+}
+
+/* Hover Effect */
+.sidebarr-link:hover {
+  background: #2c3e50; /* Darker on hover */
+  color: #ffffff;
+  .icon {
+      color: #ffffff; /* Make icon white on hover */
+  }
+}
+
+/* Active / Selected */
+.sidebarr-link.active {
+  background: #007bff;
+  color: #ffffff;
+  .icon {
+      color: #ffffff;
+  }
+}
+
+/* Adjustments for link text */
+.link-text {
+  flex-grow: 1; /* Allows text to take remaining space */
+}

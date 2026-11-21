@@ -1,0 +1,143 @@
+.testimonials {
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+    background-color: #FFF9EC;
+    text-align: center;
+
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 2.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #333;
+}
+
+.testimonial-stars {
+    display: flex;
+}
+
+.star-icon {
+    color: #ccc; /* Couleur des étoiles vides */
+    margin-right: 5px;
+}
+
+.star-icon.filled {
+    color: #ffc107; /* Couleur des étoiles remplies (jaune) */
+}
+
+.testimonial-quote {
+    margin-bottom: 15px;
+}
+
+.testimonial-date {
+    color: #777;
+    font-size: 0.9em;
+}
+
+.add-testimonial {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-testimonial h3 {
+    margin-bottom: 15px;
+}
+
+.add-testimonial input,
+.add-testimonial textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.add-testimonial button {
+    padding: 10px 20px;
+    background-color: #155e2e; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-testimonial button:hover {
+    background-color: #377246; /* Rose/Rouge (légèrement plus foncé) */
+}
+
+.rating {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.rating .star-icon {
+    cursor: pointer;
+}
+
+
+.start-btn {
+    background: #FFC300;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.start-btn:hover {
+    transform: translateY(-3px);
+    background-color: #FFA500;
+}
+.error-message {
+    color: #8b0000; /* Rouge foncé */
+    background-color: #ffe6e6; /* Rouge clair */
+    border: 1px solid #ff3333; /* Bordure rouge */
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    width: 80%; /* Ajustez la largeur selon vos besoins */
+}

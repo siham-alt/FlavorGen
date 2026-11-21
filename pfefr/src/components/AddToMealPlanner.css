@@ -1,0 +1,133 @@
+.meal-planner-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Légèrement plus foncé pour un meilleur contraste */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Ajout d'un effet de flou pour une apparence moderne */
+}
+
+.meal-planner-modal {
+    background: white;
+    padding: 30px; /* Plus d'espace intérieur */
+    border-radius: 12px; /* Bords plus arrondis */
+    width: 550px; /* Légèrement plus large */
+    max-width: 95%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+    animation: fadeIn 0.3s ease-out; /* Animation d'apparition */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.meal-planner-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px; /* Plus d'espace en dessous de l'en-tête */
+    border-bottom: 1px solid #eee; /* Ligne de séparation */
+    padding-bottom: 15px;
+}
+
+.meal-planner-modal-header h2 {
+    font-size: 1.8em; /* Titre plus grand */
+    color: #333;
+    margin: 0;
+}
+
+.meal-planner-modal-close {
+    background: none;
+    border: none;
+    font-size: 28px; /* Icône de fermeture plus grande */
+    cursor: pointer;
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+.meal-planner-modal-close:hover {
+    color: #333;
+}
+
+.meal-planner-modal-body {
+    margin-bottom: 30px; /* Plus d'espace en dessous du corps */
+}
+
+.meal-planner-modal-body label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.meal-planner-modal-body .react-calendar {
+    width: 100%;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.meal-planner-modal-body .react-calendar__navigation button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    color: #3498db;
+    padding: 8px;
+}
+
+.meal-planner-modal-body .react-calendar__tile--active {
+    background: #3498db;
+    color: white;
+}
+
+.meal-planner-modal-body select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.meal-planner-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.meal-planner-modal-footer button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.meal-planner-modal-footer button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.meal-planner-modal-footer button[variant="secondary"] {
+    background: #eee;
+    color: #555;
+}
+
+.meal-planner-modal-footer button[variant="primary"] {
+    background: #3498db;
+    color: white;
+}

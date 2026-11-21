@@ -1,0 +1,134 @@
+/* Stas.css */
+
+.stats-container {
+  padding: 30px;
+  background-color: #f7f7f7; /* Light gray background */
+  border-radius: 10px;
+}
+
+.stats-cards {
+  display: flex;
+  justify-content: space-around; /* Evenly space cards */
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  text-align: center;
+  flex: 1; /* Distribute available space equally */
+  min-width: 200px; /* Ensure a minimum width for responsiveness */
+}
+
+.stat-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.stat-number {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+/* Active User Card */
+.active-user-card {
+  background: linear-gradient(135deg, #4CAF50, #388E3C); /* Vibrant green */
+  color: white;
+}
+
+.active-user-card .stat-title {
+  color: #e8f5e9;
+}
+
+.active-user-card .stat-number {
+  color: #a5d6a7;
+}
+
+/* Inactive User Card */
+.inactive-user-card {
+  background: linear-gradient(135deg, #f44336, #d32f2f); /* Strong red */
+  color: white;
+}
+
+.inactive-user-card .stat-title {
+  color: #ffebee;
+}
+
+.inactive-user-card .stat-number {
+  color: #ef9a9a;
+}
+
+/* Graph Cards */
+.graph-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 30px;
+}
+
+.graph-cards .stat-card {
+  text-align: left; /* Align text in graph cards to the left */
+}
+
+.graph-cards .stat-card h2 {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Recharts Styles (adjust as needed) */
+.recharts-responsive-container {
+  width: 100% !important;
+  min-height: 250px; /* Ensure graphs have a reasonable height */
+}
+
+.recharts-cartesian-grid line {
+  stroke: #ccc;
+  stroke-dasharray: 5 5;
+}
+
+.recharts-tooltip-wrapper {
+  z-index: 10; /* Ensure tooltip is above other elements */
+}
+
+.recharts-tooltip-item {
+  color: #333;
+}
+
+.recharts-legend-item-text {
+  color: #555;
+}
+
+.recharts-pie-label-text {
+  fill: #fff; /* White labels on pie chart */
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #777;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+  .stats-cards {
+      flex-direction: column; /* Stack cards on smaller screens */
+  }
+
+  .stat-card {
+      width: 100%;
+  }
+}

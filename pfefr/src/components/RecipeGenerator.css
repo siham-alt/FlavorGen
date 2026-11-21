@@ -1,0 +1,298 @@
+
+.success-message {
+    background-color: #d4edda; /* Couleur de fond douce */
+    color: #155724; /* Couleur du texte */
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.5s ease-in-out; /* Animation d'apparition */
+}
+
+.success-message svg {
+    margin-right: 10px; /* Espace entre l'icône et le texte */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.recipe-generator {
+    padding: 20px;
+    width: 90%; /* Ajustez la largeur selon vos besoins */
+    margin: 0 auto; /* Centre le générateur de recettes */
+}
+
+.alert-info {
+    background-color: #e0f7fa;
+    border-color: #b2ebf2;
+    color: #006064;
+}
+
+.btn-light {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+    color: #495057;
+}
+
+.generate-button {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.generate-button:disabled {
+    background-color: #a5d6a7;
+    border-color: #a5d6a7;
+}
+
+
+.recipe-generator.chatbot-ui {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #f9f9f9; /* Arrière-plan général */
+}
+
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #f0f0f0; /* Arrière-plan de la zone de chat */
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    max-width: 80%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message.user {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+    color: #333;
+}
+
+.message.bot {
+    background-color: #e6f7ff;
+    align-self: flex-start;
+    color: #333;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    margin: 0 10px 10px 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-input input {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 18px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chat-input button {
+    background-color: #ff5d18;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.chat-input button:hover {
+    background-color: #d44b15;
+}
+
+.recipe-details {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.recipe-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ajout pour espacer le texte et le cœur */
+    width: 100%; /* Assurez-vous que le conteneur prend toute la largeur disponible */
+}
+/* RecipeGenerator.css */
+
+/* Style for the recipe name button */
+.recipe-item .recipe-text-container .btn-link {
+    background-color: #fff; /* White background for contrast */
+    border: 2px solid #ff9800; /* Orange border */
+    padding: 10px 15px;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #ff6b00; /* Darker orange text */
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20px; /* More pronounced rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.recipe-item .recipe-text-container .btn-link:hover {
+    background-color: #ff9800; /* Solid orange background on hover */
+    color: white;
+    border-color: #ff9800;
+    /* No text-decoration on hover */
+}
+
+.recipe-item .recipe-text-container .btn-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(255, 165, 0, 0.5); /* Orange focus ring */
+}
+
+
+
+.favorite-button .bi-heart-fill {
+    color: red; /* Filled heart remains red */
+}
+
+
+.preferences {
+    margin: 20px 10px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.preferences button {
+    background-color: #77bd3b;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.preferences button:hover {
+    background-color: #427317;
+    color: white;
+}
+
+.welcome-message {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #e1ad90, #ff6b1b); /* Arrière-plan dégradé */
+    border-radius: 15px;
+    margin: 90px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.2em;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #fff; /* Texte blanc pour contraste */
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+}
+
+.welcome-message::before {
+    content: ""; /* Icône de main qui fait signe */
+    font-size: 2em;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+/* RecipeGenerator.css */
+
+/* ... other styles ... */
+
+/* Style for the "Add to favorites" button */
+.btn-success {
+    background-color: #ff316c !important; /* Vibrant orange background */
+    border-color: #bd0049 !important; /* Vibrant orange border */
+    color: #fff !important; /* White text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 25px; /* Rounded corners */
+}
+
+.btn-success:hover {
+    background-color: #f6064a !important; /* Darker orange on hover */
+    border-color: #bd0049 !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-success:focus, .btn-success.focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.5) !important; /* Orange focus ring */
+}
+
+
+/* Style for the "Add to meal planner" button */
+.btn-info {
+    background-color: #8bc34a !important; /* Light green background */
+    border-color: #8bc34a !important; /* Light green border */
+    color: #fff !important; /* White text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 20px; /* Space between buttons */
+}
+
+.btn-info:hover {
+    background-color: #689f38 !important; /* Darker green on hover */
+    border-color: #689f38 !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-info:focus, .btn-info.focus {
+    box-shadow: 0 0 0 0.2rem rgba(139, 195, 74, 0.5) !important; /* Light green focus ring */
+}
+
+
+/* Optional: Add some margin between the buttons */
+.btn-success {
+    margin-right: 20px;
+}
+.btn-save{
+    background-color: #78ba3d;
+}
+.btn-save:hover{
+    background-color: #427317;
+    color: white;
+}

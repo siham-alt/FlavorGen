@@ -1,0 +1,22 @@
+.google-button {
+  background-color: #ffffff; /* Couleur de fond blanche */
+  border: 1px solid #ccc; /* Bordure grise */
+  border-radius: 50%; /* Rend le bouton rond */
+  width: 40px; /* Largeur du bouton */
+  height: 40px; /* Hauteur du bouton */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Supprime le padding par défaut */
+  cursor: pointer;
+}
+
+.google-button i {
+  font-size: 1.5em; /* Ajustez la taille de l'icône si nécessaire */
+  color: #db4437; /* Couleur rouge de l'icône Google */
+}
+
+.google-button:hover {
+  background-color: #f0f0f0; /* Couleur de fond légèrement grise au survol */
+}
+

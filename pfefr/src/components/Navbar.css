@@ -1,0 +1,22 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Alignement à droite */
+    align-items: center;
+    background-color: #f8f8f8; /* Légère couleur de fond */
+    padding: 1px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.profile-icon {
+    background-color: #FFC300; /* Couleur de fond de l'icône de profil */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+

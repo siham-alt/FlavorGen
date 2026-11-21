@@ -1,0 +1,313 @@
+/* ContactMessagesTable.css */
+
+.contact-messages-table-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-messages-table-title {
+  color: #333;
+  margin-bottom: 30px; /* Reduced margin below title */
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.contact-messages-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  overflow: hidden; /* To contain the border-radius of the table */
+}
+
+.contact-messages-table th,
+.contact-messages-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.contact-messages-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #555;
+}
+
+.contact-messages-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.contact-messages-table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35em 0.6em;
+  font-size: 0.8em;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+}
+
+.badge-warning {
+  background-color: #ffc107;
+}
+
+.badge-success {
+  background-color: #28a745;
+}
+
+.actions-cell {
+  white-space: nowrap;
+  display: flex; /* Use flex to space buttons */
+  gap: 19px; /* Add some gap between action buttons */
+}
+
+
+.btn-info {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+  border-color: #117a8b;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #212529;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.765625rem;
+  border-radius: 0.2rem;
+}
+/* ContactMessagesTable.css */
+
+/* ... other styles ... */
+
+.message-content-cell {
+  position: relative; /* Needed for absolute positioning of the tooltip */
+  max-width: 400px; /* Slightly increased max-width */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer; /* Indicate it's hoverable for full text */
+}
+
+.message-content-cell:hover::after {
+  content: attr(data-full-message); /* Get the full message from a data attribute */
+  position: absolute;
+  left: 0;
+  top: 100%; /* Keep it below the cell */
+  background-color: #333;
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  z-index: 100; /* Significantly increased z-index */
+  white-space: normal; /* Allow wrapping in the tooltip */
+  word-break: break-word;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  width: auto; /* Adjust width to content */
+  min-width: 300px; /* Ensure a minimum width */
+  max-width: 600px; /* Further increased max-width of the tooltip */
+}
+
+/* ... other styles ... */
+.contact-messages-table-empty {
+  text-align: center;
+  color: #777;
+  padding: 20px;
+}
+
+.search-filter-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.search-filter-container label {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+.search-filter-container select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.form-control-sm { /* You might already have this from Bootstrap or your styles */
+  height: auto;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+}
+
+
+
+
+
+
+
+
+/* ContactMessages.css (or Modal.css) */
+
+.modall-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Prevent interaction when hidden */
+  transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s; /* Fade in */
+}
+
+.modall-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out; /* Fade in */
+}
+
+.modall-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 70%;
+  width: auto;
+  transform: scale(0.8); /* Initially scaled down */
+  opacity: 0; /* Initially transparent */
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out; /* Scale up and fade in */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+}
+
+.modall-overlay.active .modall-content {
+  transform: scale(1); /* Scale to normal size */
+  opacity: 1;
+}
+
+.modal-content h2 {
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 15px;
+  font-size: 1.8em;
+}
+
+.modall-info {
+  margin-bottom: 20px;
+}
+
+.modall-info p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  font-size: 1.05em;
+}
+
+.modall-info strong {
+  font-weight: 600;
+  color: #333;
+  margin-right: 8px;
+}
+
+.modall-message-body {
+  background-color: #f0f8ff;
+  border: 1px solid #add8e6;
+  padding: 15px;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: #333;
+  line-height: 1.6;
+  font-size: 1em;
+  margin-bottom: 20px; /* Space before buttons */
+}
+
+.modall-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end; /* Align buttons to the right */
+  margin-top: 10px; /* Space above buttons */
+}
+
+.modall-actions button {
+  padding: 8px 12px; /* Smaller padding */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85em; /* Smaller font size */
+  transition: opacity 0.2s ease-in-out;
+  flex-grow: 0;
+  flex-shrink: 0;
+  min-width: auto; /* Adjust min-width based on content */
+}
+
+.modall-actions button:hover {
+  opacity: 0.8;
+}
+
+.modall-actions .btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.modall-actions .btn-warning {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.modall-actions .btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
