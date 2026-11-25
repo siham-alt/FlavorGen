@@ -1,138 +1,156 @@
-# 🍽️ FlavorGen — AI-Powered Recipe Generator
+# 🍽️ FlavorGen — Générateur Intelligent de Recettes
 
-**FlavorGen** is an intelligent recipe application designed to help users discover personalized recipes based on the ingredients they already have. By combining ingredient-based search and AI-powered features, the platform makes meal planning easier and helps users find inspiration for their next meal.
+## Présentation du projet
 
-## ✨ Features
+**FlavorGen** est une application intelligente de découverte et de génération de recettes, conçue pour aider les utilisateurs à trouver des idées de repas personnalisées à partir des ingrédients dont ils disposent.
 
-- **User Authentication:** Secure registration and login system.
-- **Ingredient-Based Recipe Generation:** Discover recipes based on available ingredients.
-- **AI-Powered Assistance:** Integration with external AI services to enhance the recipe discovery experience.
-- **Recipe Details:** Explore recipes with their ingredients and preparation instructions.
-- **Personalized Experience:** Access a recipe experience tailored to the user's needs.
-- **Modern Interface:** Responsive and user-friendly interface built with React.
+En combinant la recherche basée sur les ingrédients et des fonctionnalités faisant appel à l'intelligence artificielle, la plateforme facilite la préparation des repas et permet aux utilisateurs de découvrir de nouvelles recettes adaptées à leurs préférences.
 
-## 🛠️ Technologies
+FlavorGen propose également des fonctionnalités de gestion des recettes favorites, de suivi nutritionnel et de planification des repas grâce à un calendrier interactif.
 
-| Category | Technologies |
+## ✨ Fonctionnalités principales
+
+- **Authentification des utilisateurs :** système sécurisé d'inscription et de connexion.
+- **Génération de recettes à partir des ingrédients :** découverte de recettes selon les ingrédients disponibles.
+- **Assistance basée sur l'intelligence artificielle :** intégration de services externes d'IA pour enrichir l'expérience de découverte des recettes.
+- **Reconnaissance des ingrédients :** identification des ingrédients à partir d'images.
+- **Détails des recettes :** consultation des ingrédients nécessaires et des étapes de préparation.
+- **Personnalisation :** découverte de recettes adaptées aux préférences des utilisateurs.
+- **Gestion des favoris :** possibilité d'enregistrer et de retrouver ses recettes préférées.
+- **Suivi nutritionnel :** consultation des informations nutritionnelles des recettes.
+- **Planification des repas :** organisation des repas à travers un calendrier interactif.
+- **Interface moderne et responsive :** expérience utilisateur intuitive et adaptée aux différents appareils.
+
+## 🛠️ Technologies utilisées
+
+| Catégorie | Technologies |
 |---|---|
 | Backend | Laravel 11, PHP |
 | Frontend | React, JavaScript |
-| Database | MySQL |
-| Authentication | Laravel Sanctum |
-| Build Tool | Vite |
-| External APIs | Spoonacular API, Clarifai API |
+| Base de données | MySQL |
+| Authentification | Laravel Sanctum |
+| Outil de build | Vite |
+| API externes | Spoonacular API, Clarifai API |
 
-## 🏗️ Project Architecture
+## 🏗️ Architecture du projet
 
-FlavorGen follows a client-server architecture:
+FlavorGen repose sur une architecture client-serveur composée de plusieurs éléments :
 
-- **Frontend:** React application responsible for the user interface and interactions.
-- **Backend:** Laravel REST API responsible for business logic, authentication, and communication with external services.
-- **Database:** MySQL for storing application data.
-- **External Services:** Recipe and AI-related APIs to provide additional functionality.
+- **Frontend :** application React responsable de l'interface utilisateur et des interactions.
+- **Backend :** API REST développée avec Laravel, chargée de la logique métier, de l'authentification et de la communication avec les services externes.
+- **Base de données :** MySQL pour le stockage des données de l'application.
+- **Services externes :** API dédiées aux recettes et à l'intelligence artificielle afin d'enrichir les fonctionnalités de la plateforme.
 
-## ⚙️ Installation and Setup
+## ⚙️ Installation et configuration
 
-### Prerequisites
+### Prérequis
 
-Make sure you have installed:
+Avant de commencer, assurez-vous d'avoir installé :
 
-- PHP 8.2 or higher
+- PHP 8.2 ou supérieur
 - Composer
-- Node.js and npm
+- Node.js et npm
 - MySQL
 - Git
 
-### 1. Clone the repository
+### 1. Cloner le repository
 
 ```bash
 git clone https://github.com/siham-alt/FlavorGen.git
 cd FlavorGen
 ```
 
-### 2. Configure the Laravel backend
+### 2. Configurer le backend Laravel
 
-Install PHP dependencies:
+Installer les dépendances PHP :
 
 ```bash
 composer install
 ```
 
-Create the environment file:
+Créer le fichier d'environnement :
 
 ```bash
 cp .env.example .env
 ```
 
-Generate the application key:
+Sous Windows PowerShell, vous pouvez utiliser :
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Générer la clé de l'application :
 
 ```bash
 php artisan key:generate
 ```
 
-Configure your database credentials and external API keys in the `.env` file.
+Configurer les informations de connexion à la base de données ainsi que les clés des API externes dans le fichier `.env`.
 
-Run database migrations:
+Exécuter les migrations :
 
 ```bash
 php artisan migrate
 ```
 
-Start the Laravel development server:
+Démarrer le serveur Laravel :
 
 ```bash
 php artisan serve
 ```
 
-### 3. Configure the React frontend
+### 3. Configurer le frontend React
 
-Navigate to the frontend directory:
+Accéder au dossier du frontend :
 
 ```bash
 cd pfefr
 ```
 
-Install dependencies:
+Installer les dépendances :
 
 ```bash
 npm install
 ```
 
-Start the development server:
+Démarrer le serveur de développement :
 
 ```bash
 npm run dev
 ```
 
-## 🔐 Environment Variables
+## 🔐 Variables d'environnement
 
-Before running the application, configure the required environment variables in the backend `.env` file.
+Avant de lancer l'application, configurez les variables d'environnement nécessaires dans le fichier `.env` du backend.
 
-These include:
+Elles comprennent notamment :
 
-- Database connection settings.
-- Spoonacular API credentials.
-- Clarifai API credentials, if enabled.
+- Les paramètres de connexion à la base de données.
+- La clé API Spoonacular.
+- Les identifiants API Clarifai, si cette intégration est activée.
 
-**Important:** Never commit your `.env` file or expose private API keys in the repository.
+**Important :** ne publiez jamais votre fichier `.env` ni vos clés API privées sur GitHub.
 
-## 🎯 Project Objectives
+## 🎯 Objectifs du projet
 
-- Develop an intelligent recipe discovery platform.
-- Integrate external APIs into a full-stack application.
-- Build a responsive and intuitive user interface.
-- Implement secure user authentication.
-- Practice REST API development and frontend-backend integration.
+- Développer une plateforme intelligente de découverte et de génération de recettes.
+- Exploiter les ingrédients disponibles pour proposer des idées de repas.
+- Intégrer des API externes et des services d'intelligence artificielle.
+- Développer une application Full Stack avec Laravel et React.
+- Concevoir une interface moderne, intuitive et responsive.
+- Mettre en place un système d'authentification sécurisé.
+- Faciliter la gestion des recettes favorites et la planification des repas.
 
-## 👩‍💻 Developer
+## 👩‍💻 Développeuse
 
 **Siham El Mouden**
 
-Software Engineering Student — FST Mohammedia
+Étudiante en ingénierie logicielle et intégration des systèmes d'information — FST Mohammedia.
 
-- **GitHub:** [siham-alt](https://github.com/siham-alt)
-- **LinkedIn:** [Siham El Mouden](https://www.linkedin.com/in/siham-el-mouden-793874337)
+- **GitHub :** [siham-alt](https://github.com/siham-alt)
+- **LinkedIn :** [Siham El Mouden](https://www.linkedin.com/in/siham-el-mouden-793874337)
 
 ---
 
-*FlavorGen — Turn your ingredients into inspiration!* 🍅
+*FlavorGen — Transformez vos ingrédients en inspiration !* 🍅
